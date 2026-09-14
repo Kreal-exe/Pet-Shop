@@ -1,17 +1,18 @@
 .discount-form {
-    width: 1395px;
-    height: 486px;
+    width: calc(100% - 2 * clamp(16px, 3vw, 40px));
+    max-width: 1395px;
     margin: 0 auto;
+    padding-bottom: clamp(16px, 3vw, 32px);
     border-radius: 12px;
     background: linear-gradient(261.47deg, #2451C6 32.63%, #0D50FF 98.96%);   
     
     h2 {
         font-family: Montserrat;
         font-weight: 700;
-        font-size: 64px;
+        font-size: clamp(28px, 5vw, 64px);
         text-align: center;
         color: white;        
-        margin: 32px;
+        margin: clamp(16px, 3vw, 32px);
     }
   
     .form-box {
@@ -23,13 +24,20 @@
         margin: -2px;
 
         .form-img {
-            width: 783px;
-            height: 360px;
+            flex: 1 1 360px;
+            max-width: 783px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
         }
   
         .form {
             width: 100%;
             max-width: 400px;
+            padding: 0 16px;
             background: transparent;
   
             .form-field {

@@ -1,6 +1,6 @@
 .footer {
 margin: 0 auto;
-padding: 0 40px;
+padding: 0 clamp(16px, 3vw, 40px);
 max-width: 1440px;
     &-title {
       font-size: clamp(30px, 6vw, 64px);
@@ -11,9 +11,9 @@ max-width: 1440px;
   
     &-grid {
       display: grid;
-      grid-template-columns: 780px 548px;
+      grid-template-columns: minmax(0, 780fr) minmax(0, 548fr);
       gap: 20px;
-      width: 1360px;
+      width: 100%;
   
       .footer-card:nth-child(odd) {
         grid-column: span 1;
@@ -33,27 +33,14 @@ max-width: 1440px;
       justify-content: center;
       align-items: flex-start;
   
-      &.phone{
-        height: 150px;
-      }
       &.phone,
-      &.address {
-        width: 780px;
+      &.socials {
+        min-height: 150px;
       }
-  
+
       &.address,
       &.working-hours {
-        height: 194px;
-      }
-  
-      &.socials {
-        width: 548px;
-        height: 150px;
-      }
-  
-      &.working-hours {
-        width: 548px;
-        height: 194px;
+        min-height: 194px;
       }
     }
   
@@ -98,3 +85,13 @@ max-width: 1440px;
       }
     }
   }
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+
+    .footer-map {
+      grid-column: span 1;
+    }
+  }
+}

@@ -1,17 +1,15 @@
 /* Общий контейнер страницы корзины */
 .cart-page {
     margin: 0 auto;
-    width: 1440px;
-    // display: flex;
-    padding: 0 40px;
-
+    max-width: 1440px;
+    padding: 0 clamp(16px, 3vw, 40px);
 }
 
 /* Заголовок страницы */
 .cart-page h2 {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 64px;
+    font-size: clamp(32px, 6vw, 64px);
     line-height: 110.00000000000001%;
     letter-spacing: 0%;
 }
@@ -25,13 +23,16 @@
 
 .cart-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 32px;
 }
 
 /* Список товаров в корзине */
 .cart-items {
-    width: 780px;
-    gap: 16px;
+    flex: 1 1 420px;
+    max-width: 780px;
+    min-width: 0;
 }
 
 /* Карточка товара в корзине */
@@ -40,7 +41,7 @@
     border: 1px solid #dddddd;
     border-radius: 12px;
     margin-top: 16px;
-    width: 780px;
+    width: 100%;
 }
 
 .cart-item:hover {
@@ -48,8 +49,10 @@
 }
 
 .cart-item__image {
-    width: 200px;
-    height: 180px;
+    flex: 0 0 clamp(100px, 26vw, 200px);
+    width: clamp(100px, 26vw, 200px);
+    align-self: stretch;
+    object-fit: contain;
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
@@ -57,7 +60,8 @@
 }
 
 .cart-item__info {
-    width: 502px;
+    flex: 1;
+    min-width: 0;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -65,7 +69,7 @@
 }
 
 .cart-item__info h3 {
-    height: 25px;
+    margin: 0;
 }
 
 .cart-item__title {
@@ -75,8 +79,9 @@
 }
 
 .selector_and_price{
-    display: flex
-    ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
         align-items: center;
     
 }
@@ -96,7 +101,7 @@
 }
 
 .cart-item__current-price{
-    font-size: 48px !important;
+    font-size: clamp(24px, 4vw, 48px) !important;
     margin-bottom: 12px;
 }
 
@@ -136,9 +141,8 @@
     background: transparent;
     margin: 0 4px;
     font-size: 20px;
-    position: relative;
-    right: -40px;
-    top: 20px;
+    margin: 12px 12px 0 0;
+    cursor: pointer;
 }
 
 .cart-item__remove-button:hover {
@@ -148,20 +152,20 @@
 /* Детали заказа */
 .order-details {
     background: #f1f3f4;
-    padding: 0 32px;
+    padding: 8px clamp(16px, 3vw, 32px) 32px;
     border-radius: 12px;
-    width: 548px;
-    height: 692px;
+    flex: 1 1 320px;
+    max-width: 548px;
     margin-top: 16px;
 }
 
 .order-details h3 {
-    font-size: 40px;
+    font-size: clamp(24px, 3vw, 40px);
 }
 .order-details p{
-font-size: 40px;
+font-size: clamp(20px, 2.5vw, 40px);
 font-weight: 500;
-line-height: 22px;
+line-height: 1.2;
 color: black;
 }
 .form-field {

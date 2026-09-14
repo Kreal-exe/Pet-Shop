@@ -1,7 +1,12 @@
 .NotFoundPage{
     margin: 0 auto;
-    width: 690px;
-    padding-top: 50px;
+    max-width: 690px;
+    padding: 50px 16px 0;
+}
+
+.NotFoundPage_top img {
+    width: 100%;
+    height: auto;
 }
 
 .NotFoundPage_bottom {
@@ -14,7 +19,7 @@
 .NotFoundPage_bottom h2{
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 64px;
+    font-size: clamp(32px, 8vw, 64px);
     line-height: 110.00000000000001%;
     letter-spacing: 0%;
     text-align: center;
