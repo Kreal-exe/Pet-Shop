@@ -48,5 +48,5 @@ VITE_API_URL=https://your-backend.example.com
 
 ## Deployment
 
-- **Backend** runs on [Render](https://render.com) as a Node web service described in `render.yaml` (root `Pet-Shop-Backend`, `node index.js`, listens on `$PORT`).
+- **Backend** runs on [Render](https://render.com) as a Node web service described in `render.yaml` (root `Pet-Shop-Backend`, `node index.js`, listens on `$PORT`). The free instance would spin down after 15 minutes of inactivity, so an UptimeRobot HTTP monitor pings `/categories/all` every 5 minutes to keep it warm.
 - **Frontend** is published to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`. The build reads the backend origin from the repository variable `VITE_API_URL` (Settings → Secrets and variables → Actions → Variables).
