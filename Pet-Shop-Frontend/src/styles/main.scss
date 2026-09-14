@@ -1,0 +1,47 @@
+@use "./header";
+@use "./hero";
+@use "./categories";
+@use "./footer";
+@use "./discount";
+@use "./productList";
+@use "./productPage";
+@use "./notFound";
+@use "./cartPage";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #282828; // Цвет текста
+  font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  background-color: #ffffff; // Цвет фона
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+a:hover {
+  color: inherit;
+}
