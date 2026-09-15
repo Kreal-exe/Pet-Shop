@@ -4,7 +4,7 @@
 
 An online store for pet products: categories, product listings with price/discount filters and sorting, product pages, a cart with a discount coupon and an order form. Built with React, Redux Toolkit and React Router on the frontend and Express + SQLite on the backend.
 
-**Live demo:** https://blunt0ff.github.io/Pet-Shop/
+**Live demo:** https://kreal-exe.github.io/Pet-Shop/
 
 ## Structure
 
